@@ -343,3 +343,42 @@ footer p {
         box-sizing: border-box;
     }
 }
+
+/* Join Us Form Styling */
+
+.join-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.join-form input,
+.join-form select {
+    padding: 15px;
+    border: 1px solid #d5dce8;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+}
+
+.join-form input:focus,
+.join-form select:focus {
+    outline: none;
+    border-color: #1d4ed8;
+    box-shadow: 0 0 8px rgba(29, 78, 216, 0.15);
+}
+
+.join-form button {
+    cursor: pointer;
+    width: 100%;
+}
+
+#formMessage {
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+}

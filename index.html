@@ -171,23 +171,49 @@
 
     </section>
 
-    <!-- Join -->
-    <section class="join" id="join">
+    
+<!-- Join -->
+<section class="join" id="join">
 
-        <p class="section-label">BE A PART OF SOMETHING BIG</p>
+    <p class="section-label">BE A PART OF SOMETHING BIG</p>
 
-        <h2>Your Passion Deserves a Platform.</h2>
+    <h2>Your Passion Deserves a Platform.</h2>
 
-        <p>
-            Find your people. Explore your interests.
-            Start your journey.
-        </p>
+    <p>
+        Find your people. Explore your interests.
+        Start your journey.
+    </p>
 
-        <a href="#clubs" class="primary-btn">
-            Explore Communities →
-        </a>
+    <form id="joinForm" class="join-form">
 
-    </section>
+        <input type="text" id="studentName"
+            placeholder="Enter your full name" required>
+
+        <input type="email" id="studentEmail"
+            placeholder="Enter your email address" required>
+
+        <select id="clubChoice" required>
+            <option value="">Select your preferred club</option>
+            <option>Dance & Music</option>
+            <option>Sports & Games</option>
+            <option>Arts & Creativity</option>
+            <option>Technical Clubs</option>
+            <option>Cultural Clubs</option>
+            <option>Social Service</option>
+            <option>Entrepreneurship</option>
+            <option>Literary Clubs</option>
+        </select>
+
+        <button type="submit" class="primary-btn">
+            Submit Application
+        </button>
+
+    </form>
+
+    <p id="formMessage"></p>
+
+</section>
+
 
     <!-- Footer -->
     <footer>

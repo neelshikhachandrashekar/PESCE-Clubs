@@ -46,3 +46,22 @@ function searchClubs() {
 searchButton.addEventListener("click", searchClubs);
 
 searchInput.addEventListener("input", searchClubs);
+
+// Join Us Form Functionality
+
+const joinForm = document.getElementById("joinForm");
+const formMessage = document.getElementById("formMessage");
+
+joinForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const studentName = document.getElementById("studentName").value;
+    const clubChoice = document.getElementById("clubChoice").value;
+
+    formMessage.textContent =
+        `Thank you, ${studentName}! Your interest in ${clubChoice} has been noted.`;
+
+    formMessage.style.color = "green";
+
+    joinForm.reset();
+});

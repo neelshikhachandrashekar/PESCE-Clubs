@@ -1,0 +1,286 @@
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #202938;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #172554;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #3975d7;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+}
+
+.nav-links a:hover {
+    color: #3975d7;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background: #f5f8ff;
+    padding: 80px 10%;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tagline,
+.section-label {
+    color: #3975d7;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    color: #172554;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #3975d7;
+}
+
+.hero-content > p:not(.tagline) {
+    max-width: 580px;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ABOUT */
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    padding: 90px 30px;
+    text-align: center;
+}
+
+.about h2,
+.clubs h2,
+.events h2 {
+    font-size: 34px;
+    color: #172554;
+    margin-bottom: 20px;
+}
+
+.about > p:last-child {
+    color: #64748b;
+}
+
+/* CLUBS */
+
+.clubs {
+    background: #f8fafc;
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.section-description {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+.club-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.club-card {
+    background: white;
+    padding: 30px 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.club-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+}
+
+.club-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.club-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #172554;
+}
+
+.club-card p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* EVENTS */
+
+.events {
+    padding: 85px 10%;
+    text-align: center;
+}
+
+.event-card {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.event-card p {
+    color: #64748b;
+}
+
+.event-card span {
+    font-size: 13px;
+    color: #3975d7;
+}
+
+/* JOIN */
+
+.join {
+    background: #f5f8ff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.join h2 {
+    font-size: 34px;
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.join p:not(.section-label) {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #172554;
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .club-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .club-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .clubs h2,
+    .events h2,
+    .join h2 {
+        font-size: 27px;
+    }
+}

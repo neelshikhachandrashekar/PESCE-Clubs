@@ -284,3 +284,62 @@ footer p {
         font-size: 27px;
     }
 }
+/* Club Search Bar */
+
+.club-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    max-width: 600px;
+    margin: 35px auto;
+    padding: 0 15px;
+}
+
+.club-search input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid #d5dce8;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.club-search input:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 8px rgba(29, 78, 216, 0.15);
+}
+
+.club-search button {
+    padding: 15px 25px;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.club-search button:hover {
+    background-color: #153eaa;
+}
+
+#noResults {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 480px) {
+    .club-search {
+        flex-direction: column;
+    }
+
+    .club-search input,
+    .club-search button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

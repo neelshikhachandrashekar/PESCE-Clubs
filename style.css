@@ -1,3 +1,6 @@
+/* =====================================
+   PESCE CLUBS — PASTEL ELEGANCE THEME
+===================================== */
 
 /* GENERAL */
 
@@ -5,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 html {
@@ -13,16 +16,22 @@ html {
 }
 
 body {
-    background: #ffffff;
-    color: #202938;
-    line-height: 1.6;
+    background: #fffdfd;
+    color: #29334d;
+    line-height: 1.7;
+}
+
+::selection {
+    background: #e5d9ff;
+    color: #29334d;
 }
 
 /* NAVIGATION */
 
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #f0eaf5;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -31,46 +40,56 @@ header {
 .navbar {
     max-width: 1200px;
     margin: auto;
-    padding: 20px 30px;
+    padding: 19px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: #172554;
+    font-size: 27px;
+    font-weight: 800;
+    color: #29264f;
     text-decoration: none;
+    letter-spacing: -1px;
 }
 
 .logo span {
-    color: #3975d7;
+    color: #9274d8;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 12px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #475569;
+    color: #596078;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 14px;
+    border-radius: 25px;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #3975d7;
+    color: #7958c7;
+    background: #f1eaff;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 520px;
+    min-height: 560px;
     display: flex;
     align-items: center;
-    background: #f5f8ff;
-    padding: 80px 10%;
+    padding: 90px 10%;
+    background:
+        radial-gradient(circle at 85% 20%, #f9dce9 0, transparent 28%),
+        radial-gradient(circle at 75% 85%, #dfe7ff 0, transparent 30%),
+        linear-gradient(120deg, #f5efff, #fff5f5 55%, #f0f5ff);
 }
 
 .hero-content {
@@ -79,76 +98,85 @@ header {
 
 .tagline,
 .section-label {
-    color: #3975d7;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    color: #9571d5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 17px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    line-height: 1.2;
-    color: #172554;
-    margin-bottom: 22px;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.15;
+    color: #29264f;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
 }
 
 .hero h1 span {
-    color: #3975d7;
+    color: #9274d8;
 }
 
 .hero-content > p:not(.tagline) {
     max-width: 580px;
-    color: #64748b;
-    margin-bottom: 30px;
+    color: #68718b;
+    margin-bottom: 32px;
+    font-size: 16px;
 }
 
 .primary-btn {
     display: inline-block;
-    background: #2563eb;
+    background: linear-gradient(110deg, #9274d8, #718bdc);
     color: white;
     text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 6px;
-    transition: 0.3s;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 7px 18px rgba(130, 105, 204, 0.22);
+    transition: 0.3s ease;
+    border: none;
 }
 
 .primary-btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 23px rgba(130, 105, 204, 0.3);
 }
 
 /* ABOUT */
 
 .about {
-    max-width: 850px;
+    max-width: 900px;
     margin: auto;
-    padding: 90px 30px;
+    padding: 100px 30px;
     text-align: center;
 }
 
 .about h2,
 .clubs h2,
 .events h2 {
-    font-size: 34px;
-    color: #172554;
+    font-size: 36px;
+    line-height: 1.25;
+    color: #29264f;
     margin-bottom: 20px;
+    letter-spacing: -0.7px;
 }
 
 .about > p:last-child {
-    color: #64748b;
+    color: #70788e;
+    max-width: 750px;
+    margin: auto;
 }
 
 /* CLUBS */
 
 .clubs {
-    background: #f8fafc;
-    padding: 85px 8%;
+    background: linear-gradient(180deg, #f8f5ff, #fff9fb);
+    padding: 95px 8%;
     text-align: center;
 }
 
 .section-description {
-    color: #64748b;
+    color: #70788e;
     margin-bottom: 40px;
 }
 
@@ -157,134 +185,192 @@ header {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+    gap: 24px;
 }
 
 .club-card {
-    background: white;
-    padding: 30px 20px;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 32px 23px;
+    border: 1px solid #eee9f5;
+    border-radius: 18px;
     text-align: left;
-    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(64, 48, 100, 0.045);
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.club-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #c7b4f3;
+}
+
+.club-card:nth-child(4n + 1)::before {
+    background: #c3b0f2;
+}
+
+.club-card:nth-child(4n + 2)::before {
+    background: #f3b8ce;
+}
+
+.club-card:nth-child(4n + 3)::before {
+    background: #a9d9e8;
+}
+
+.club-card:nth-child(4n + 4)::before {
+    background: #f3d19e;
 }
 
 .club-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 32px rgba(90, 70, 140, 0.12);
+    border-color: #dfd3f5;
 }
 
 .club-icon {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 35px;
+    margin-bottom: 16px;
+    display: inline-block;
+    background: #f3edff;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+.club-card:nth-child(4n + 2) .club-icon {
+    background: #fff0f5;
+}
+
+.club-card:nth-child(4n + 3) .club-icon {
+    background: #eaf8fc;
+}
+
+.club-card:nth-child(4n + 4) .club-icon {
+    background: #fff6e8;
 }
 
 .club-card h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #172554;
+    color: #343052;
 }
 
 .club-card p {
     font-size: 14px;
-    color: #64748b;
+    color: #747c91;
 }
 
 /* EVENTS */
 
 .events {
-    padding: 85px 10%;
+    padding: 95px 10%;
     text-align: center;
+    background: #ffffff;
 }
 
 .event-card {
-    max-width: 650px;
-    margin: 20px auto;
-    padding: 25px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
+    max-width: 700px;
+    margin: 24px auto;
+    padding: 30px;
+    background: linear-gradient(120deg, #fff7fa, #f7f4ff);
+    border: 1px solid #eee5f5;
+    border-left: 5px solid #c3a8ef;
+    border-radius: 20px;
     text-align: left;
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(90, 70, 140, 0.09);
+}
+
+.event-card h3 {
+    color: #343052;
+    margin-bottom: 8px;
 }
 
 .event-card p {
-    color: #64748b;
+    color: #747c91;
 }
 
 .event-card span {
     font-size: 13px;
-    color: #3975d7;
+    font-weight: 700;
+    color: #9274d8;
 }
 
-/* JOIN */
+/* JOIN SECTION */
 
 .join {
-    background: #f5f8ff;
-    padding: 80px 20px;
+    width: 100%;
+    background: linear-gradient(120deg, #f1edff, #fff0f5, #eaf5ff);
+    padding: 90px 20px;
     text-align: center;
 }
 
 .join h2 {
-    font-size: 34px;
-    color: #172554;
+    font-size: 36px;
+    color: #29264f;
     margin-bottom: 15px;
 }
 
 .join p:not(.section-label) {
-    color: #64748b;
+    color: #70788e;
     margin-bottom: 25px;
 }
 
-/* FOOTER */
+/* JOIN FORM */
 
-footer {
-    background: #172554;
-    color: white;
-    padding: 35px;
+.join-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    width: 90%;
+    max-width: 500px;
+    margin: 35px auto;
+}
+
+.join-form input,
+.join-form select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 15px 18px;
+    border: 1px solid #e2d9ef;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #ffffff;
+    color: #343052;
+    box-shadow: 0 4px 12px rgba(80, 60, 120, 0.04);
+}
+
+.join-form input:focus,
+.join-form select:focus {
+    outline: none;
+    border-color: #9274d8;
+    box-shadow: 0 0 0 4px rgba(146, 116, 216, 0.12);
+}
+
+.join-form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#formMessage {
     text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
 }
 
-footer p {
-    font-size: 13px;
-    color: #cbd5e1;
-    margin-top: 8px;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 900px) {
-    .club-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .club-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about h2,
-    .clubs h2,
-    .events h2,
-    .join h2 {
-        font-size: 27px;
-    }
-}
-/* Club Search Bar */
+/* CLUB SEARCH */
 
 .club-search {
     display: flex;
@@ -298,41 +384,160 @@ footer p {
 
 .club-search input {
     flex: 1;
+    min-width: 0;
     padding: 15px 20px;
-    border: 1px solid #d5dce8;
-    border-radius: 8px;
+    border: 1px solid #e2d9ef;
+    border-radius: 12px;
     font-size: 15px;
     outline: none;
-    transition: 0.3s;
+    background: white;
 }
 
 .club-search input:focus {
-    border-color: #1d4ed8;
-    box-shadow: 0 0 8px rgba(29, 78, 216, 0.15);
+    border-color: #9274d8;
+    box-shadow: 0 0 0 4px rgba(146, 116, 216, 0.12);
 }
 
 .club-search button {
     padding: 15px 25px;
-    background-color: #1d4ed8;
+    background: linear-gradient(110deg, #9274d8, #e28eae);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 15px;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.club-search button:hover {
-    background-color: #153eaa;
 }
 
 #noResults {
     text-align: center;
-    color: #64748b;
+    color: #747c91;
     margin-bottom: 25px;
 }
 
-@media (max-width: 480px) {
+/* FOOTER */
+
+footer {
+    background: #29264f;
+    color: white;
+    padding: 42px 25px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 13px;
+    color: #d8d4ed;
+    margin-top: 8px;
+}
+
+/* GLOBAL ALIGNMENT */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* EXTRA HERO EFFECT */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "✦";
+    position: absolute;
+    right: 12%;
+    top: 18%;
+    font-size: 150px;
+    color: rgba(146, 116, 216, 0.13);
+    animation: floatStar 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #9274d8, #e58eae, #6c9de8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes floatStar {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(12deg);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .club-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 80px 7%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 16px;
+    }
+
+    .nav-links {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .club-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .clubs h2,
+    .events h2,
+    .join h2 {
+        font-size: 29px;
+    }
+
+    .about,
+    .clubs,
+    .events {
+        padding: 70px 22px;
+    }
+
     .club-search {
         flex-direction: column;
     }
@@ -340,88 +545,137 @@ footer p {
     .club-search input,
     .club-search button {
         width: 100%;
-        box-sizing: border-box;
+    }
+
+    .join-form {
+        width: 100%;
     }
 }
 
-/* Join Us Form Styling */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-.join-form {
-    max-width: 500px;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    .hero::after {
+        animation: none;
+    }
+}
+/* =================================
+   PREMIUM CLUB CARD ENHANCEMENTS
+================================= */
+
+.club-card {
+    border: 1px solid rgba(190, 170, 225, 0.25);
+    border-radius: 24px;
+    padding: 32px 26px;
+    min-height: 310px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
 }
 
-.join-form input,
-.join-form select {
-    padding: 15px;
-    border: 1px solid #d5dce8;
-    border-radius: 8px;
-    font-size: 15px;
+/* Decorative pastel glow */
+
+.club-card::after {
+    content: "";
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    top: -65px;
+    right: -55px;
+    background: rgba(195, 176, 242, 0.17);
+    z-index: -1;
+    transition: transform 0.4s ease;
+}
+
+.club-card:nth-child(4n + 2)::after {
+    background: rgba(243, 184, 206, 0.22);
+}
+
+.club-card:nth-child(4n + 3)::after {
+    background: rgba(169, 217, 232, 0.24);
+}
+
+.club-card:nth-child(4n + 4)::after {
+    background: rgba(243, 209, 158, 0.25);
+}
+
+/* Icon animation */
+
+.club-icon {
+    transition: transform 0.35s ease;
+    box-shadow: 0 6px 16px rgba(80, 60, 120, 0.06);
+}
+
+.club-card:hover .club-icon {
+    transform: scale(1.12) rotate(-7deg);
+}
+
+/* Card hover effect */
+
+.club-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 18px 38px rgba(104, 79, 155, 0.13);
+    border-color: #d8c8f5;
+}
+
+.club-card:hover::after {
+    transform: scale(1.35);
+}
+
+/* Colourful title underline */
+
+.club-card h3 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 9px;
+}
+
+.club-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 3px;
+    border-radius: 10px;
+    background: #bca5ed;
+    transition: width 0.3s ease;
+}
+
+.club-card:nth-child(4n + 2) h3::after {
+    background: #eda8c2;
+}
+
+.club-card:nth-child(4n + 3) h3::after {
+    background: #8bcddd;
+}
+
+.club-card:nth-child(4n + 4) h3::after {
+    background: #e9bd79;
+}
+
+.club-card:hover h3::after {
     width: 100%;
-    box-sizing: border-box;
-    background: white;
 }
 
-.join-form input:focus,
-.join-form select:focus {
-    outline: none;
-    border-color: #1d4ed8;
-    box-shadow: 0 0 8px rgba(29, 78, 216, 0.15);
+/* Better text readability */
+
+.club-card p {
+    line-height: 1.8;
+    margin-top: 5px;
 }
 
-.join-form button {
-    cursor: pointer;
-    width: 100%;
+/* Mobile-friendly cards */
+
+@media (max-width: 600px) {
+    .club-card {
+        min-height: auto;
+        padding: 28px 23px;
+    }
 }
-
-#formMessage {
-    margin-top: 20px;
-    font-weight: 600;
-    text-align: center;
-}
-
-/* Improved Join Us Form Design */
-
-.join-form {
-    max-width: 500px;
-    width: 90%;
-    margin: 35px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.join-form input,
-.join-form select {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px 18px;
-    border: 1px solid #d5dce8;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #ffffff;
-    color: #1e293b;
-}
-
-.join-form input:focus,
-.join-form select:focus {
-    outline: none;
-    border-color: #1d4ed8;
-    box-shadow: 0 0 8px rgba(29, 78, 216, 0.15);
-}
-
-.join-form button {
-    width: 100%;
-    padding: 15px;
-    cursor: pointer;
-}
-
-#formMessage {
-    text-align: center;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
